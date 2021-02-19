@@ -5,7 +5,7 @@ Simplest setup will be:
 # Run on servers where you want to catch traffic. You can run it on every `web` machine.
 sudo gor --input-raw :80 --output-http http://staging.com
 ```
-It will record and replay traffic from the same machine. However, it is possible to use [[Aggregator-forwarder setup]], when Gor on your web machines forward traffic to Gor aggregator instance running on the separate server.
+It will record and replay traffic from the same machine. However, it is possible to use Aggregator-forwarder setup in a [[Distributed configuration]], in which Gor will capture traffic on your web machines and forward the requests to a Gor aggregator running on a separate server.
 
 > You may notice that it require `sudo`: to analyze network Gor need permissions which available only to root users. However, it is possible to configure Gor [beign run for non-root users](Running as a non-root user).
 

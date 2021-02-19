@@ -5,13 +5,13 @@ You can [rate limit](/rate-limiting.md), [filter](request-filtering.md), [rewrit
 
 ### Available inputs
 
-* `--input-raw` - used to capture HTTP traffic, you should specify IP address or interface and application port. More about [[Capturing and replaying traffic]]. 
+* `--input-raw` - used to capture HTTP traffic, you should specify IP address or interface and application port. More about [[Capturing and replaying traffic]].
 * `--input-file` - accepts file which previously was recorded using ` --output-file`. More about [[Saving and Replaying from file]]
-* `--input-tcp` - used by Gor aggregation instance if you decided forward traffic from multiple forwarder Gor instances to it. Read about using [[Aggregator-forwarder setup]].
+* `--input-tcp` - used by a Gor aggregator for accepting forwarded traffic from other Gor instances. Read about using Aggregator-forwarder setup in [[Distributed configuration]].
 
 ### Available outputs
 
 * `--output-http` - replay HTTP traffic to given endpoint, accepts base url. Read [more about it](Replaying HTTP traffic)
 * `--output-file` - records incoming traffic to the file. More about [[Saving and Replaying from file]]
-* `--output-tcp` - forward incoming data to another Gor instance, used in conjunction with `--input-tcp`. Read more about [[Aggregator-forwarder setup]].
+* `--output-tcp` - forward incoming data to another Gor instance, used in conjunction with `--input-tcp`. Read about using Aggregator-forwarder setup in [[Distributed configuration]].
 * `--output-stdout` - used for debugging, outputs all data to stdout.
